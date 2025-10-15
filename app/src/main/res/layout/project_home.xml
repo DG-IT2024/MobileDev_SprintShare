@@ -6,14 +6,14 @@
     android:orientation="vertical"
     android:background="#F7F7F7">
 
-    <!-- ✅ Top App Bar -->
+    <!--  Top App Bar -->
     <View
         android:id="@+id/statusBarCover"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:background="@color/black_bg" />
 
-    <!-- ✅ Choose Project Dropdown Section -->
+    <!-- Choose Project Dropdown Section -->
     <LinearLayout
         android:id="@+id/layoutChooseProject"
         android:layout_width="match_parent"
@@ -66,7 +66,7 @@
             android:tint="@android:color/white" />
     </LinearLayout>
 
-    <!-- ✅ Filter Row -->
+    <!-- Filter Row -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
             android:padding="8dp" />
     </LinearLayout>
 
-    <!-- ✅ RecyclerView -->
+    <!-- RecyclerView -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerViewProjects"
         android:layout_width="match_parent"
@@ -101,7 +101,7 @@
         android:layout_weight="1"
         android:padding="12dp" />
 
-    <!-- ✅ Floating Action Button -->
+    <!-- Floating Action Button -->
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabAddProject"
         android:layout_width="wrap_content"
@@ -112,7 +112,7 @@
         app:srcCompat="@drawable/ic_add"
         android:contentDescription="Add Project" />
 
-    <!-- ✅ Bottom Navigation -->
+    <!-- Bottom Navigation -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"

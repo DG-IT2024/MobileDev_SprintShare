@@ -5,6 +5,6 @@
     <dimen name="filter_popup_width">160dp</dimen>
     <dimen name="add_popup_width">260dp</dimen>
 
-    <!-- Optional: general spacing -->
+    <!-- General spacing -->
     <dimen name="popup_padding">16dp</dimen>
 </resources>
