@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">ProjectHome</string>
+    <string name="choose_project">Choose Project</string>
+    <string name="add_project">Add Project</string>
+</resources>
