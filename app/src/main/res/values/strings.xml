@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">SprintShare</string>
+    <string name="sprint_share_header">Sprint\nShare</string>
+    <string name="login_header">Login</string>
+    <string name="sign_up_header">Sign Up</string>
+    <string name="forgot_password_header">Forgot Password</string>
+    <string name="first_name_hint_plain">First Name</string>
+    <string name="last_name_hint_plain">Last Name</string>
+    <string name="email_hint_plain">email</string>
+    <string name="password_hint_field">password</string>
+    <string name="retype_password_hint_field">retype password</string>
+    <string name="forgot_password_text">Forgot Password?</string>
+    <string name="username_hint_forgot_password">username</string>
+    <string name="login_button">LOG IN</string>
+    <string name="sign_up_button">SIGN UP</string>
+    <string name="create_account_button">CREATE ACCOUNT</string>
+    <string name="send_reset_link_button">Send Reset Link</string>
+    <string name="or_text">OR</string>
+
 </resources>
