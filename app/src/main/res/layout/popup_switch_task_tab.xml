@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:padding="12dp"
+    android:orientation="vertical"
+    android:background="@color/white">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Switch / Manage Task Tabs"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textSize="16sp"/>
+
+    <ListView
+        android:id="@+id/listTaskTabs"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="#333"
+        android:dividerHeight="1dp"
+        android:layout_marginTop="8dp" />
+
+    <TextView
+        android:id="@+id/btnCloseTabList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Close"
+        android:textColor="#FF9800"
+        android:gravity="end"
+        android:paddingTop="8dp" />
+</LinearLayout>

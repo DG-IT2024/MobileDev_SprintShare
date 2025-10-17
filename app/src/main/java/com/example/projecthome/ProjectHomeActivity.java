@@ -57,7 +57,7 @@ public class ProjectHomeActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 
         fab.setOnClickListener(v -> showAddProjectPopup(v));
-        btnFilter.setOnClickListener(v -> showFilterPopup(v)); // ✅ use your icon button
+        btnFilter.setOnClickListener(v -> showFilterPopup(v)); // use your icon button
 
         iconDropdown.setOnClickListener(this::showProjectDropdown);
 

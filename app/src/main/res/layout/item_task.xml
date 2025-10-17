@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:layout_marginVertical="6dp"
+    android:background="@drawable/bg_task_card"
+    android:gravity="center_vertical">
+
+    <!-- Blank/Checked icon -->
+    <ImageView
+        android:id="@+id/imgTaskStatus"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_gravity="center_vertical"
+        android:src="@drawable/ic_checkbox_blank"
+        android:contentDescription="Task Status" />
+
+    <!-- Task Info -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:paddingStart="10dp"
+        android:paddingEnd="10dp">
+
+        <TextView
+            android:id="@+id/tvTaskName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="do a flip"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <TextView
+            android:id="@+id/tvAssignee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="just do a flip"
+            android:textSize="13sp"
+            android:textColor="#444" />
+    </LinearLayout>
+
+    <!-- Assign Info -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="end|center_vertical">
+
+        <TextView
+            android:id="@+id/tvAssign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Assign"
+            android:textStyle="bold"
+            android:textColor="#000" />
+
+        <TextView
+            android:id="@+id/tvDeadline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="deadline"
+            android:textSize="12sp"
+            android:textColor="#555" />
+    </LinearLayout>
+
+</LinearLayout>

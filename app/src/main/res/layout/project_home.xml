@@ -14,7 +14,6 @@
         android:background="@color/black_bg" />
 
     <!-- Choose Project Dropdown Section -->
-    <!-- Choose Project Dropdown Section -->
     <LinearLayout
         android:id="@+id/layoutChooseProject"
         android:layout_width="match_parent"
