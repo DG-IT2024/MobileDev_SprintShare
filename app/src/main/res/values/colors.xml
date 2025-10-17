@@ -3,4 +3,6 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="button_color">#FFAD73</color>
+    <color name="account_background_color">#424242</color>
+    <color name="mild_black">#363636</color>
 </resources>
