@@ -20,7 +20,7 @@ This mobile-first platform is designed to make group collaboration **efficient, 
 
 The system ensures smooth collaboration by reducing **delayed decisions, scheduling conflicts, and lack of accountability**, while being accessible in **mobile platforms**.
 
-> [cite_start] The primary objective of this project is to develop *SprintShare*, a collaboration management application designed to centralize and streamline group collaboration for students [cite: 66, 67].
+The primary objective of this project is to develop *SprintShare*, a collaboration management application designed to centralize and streamline group collaboration for students.
 
 ---
 
@@ -39,8 +39,6 @@ The system ensures smooth collaboration by reducing **delayed decisions, schedul
 ### 🎓 End Users
 - **Students** – Gain a more equitable, transparent, and organized system for managing group work and tracking contributions.  
 - **Teachers** – Gain visibility into group collaboration, enabling more accurate assessment of both group and individual performance.
-
-> [cite_start] Students and teachers benefit from fairer workload distribution, improved accountability, and clearer evaluation metrics [cite: 81, 82].
 
 ---
 
