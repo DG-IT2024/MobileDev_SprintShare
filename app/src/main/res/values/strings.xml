@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">SprintShare</string>
+    <string name="sprint_share_header">Sprint\nShare</string>
+    <string name="login_header">Login</string>
+    <string name="sign_up_header">Sign Up</string>
+    <string name="forgot_password_header">Forgot Password</string>
+    <string name="first_name_hint_plain">First Name</string>
+    <string name="last_name_hint_plain">Last Name</string>
+    <string name="email_hint_plain">email</string>
+    <string name="password_hint_field">password</string>
+    <string name="retype_password_hint_field">re-enter password</string>
+    <string name="current_password_hint_field">current password</string>
+    <string name="new_password_hint_field">new password</string>
+    <string name="forgot_password_text">Forgot Password?</string>
+    <string name="username_hint_forgot_password">username</string>
+    <string name="login_button">LOG IN</string>
+    <string name="sign_up_button">SIGN UP</string>
+    <string name="update_button">UPDATE</string>
+    <string name="create_account_button">CREATE ACCOUNT</string>
+    <string name="send_reset_link_button">Send Reset Link</string>
+    <string name="or_text">OR</string>
+    <string name="select_status">Select Status</string>
+    <string name="profile_name">Nero Martinez</string>
+    <string name="profile_welcome">Welcome to SprintShare !</string>
+    <string name="profile_settings">Account Settings</string>
+    <string name="profile_logout">Logout</string>
+    <string name="change_account_info">Change Account Info</string>
+    <string name="change_password">Change Password</string>
+    <string name="already_have_account">Already have an account? Log in</string>
+</resources>
