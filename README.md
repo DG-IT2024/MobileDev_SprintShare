@@ -1,4 +1,4 @@
-# SprintShare: Project Management and Collaboration Application 🚀
+# SprintShare: Project Management and Collaboration Application 
 
 See source code: https://github.com/DG-IT2024/MobileDev_SprintShare
 
