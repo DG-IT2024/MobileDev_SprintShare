@@ -40,12 +40,3 @@ MobileDev_SprintShare/
 ├── mobile-app/         # Source code for the mobile application (e.g., Flutter/React Native)
 │   ├── src/            # Contains app logic, UI, and components
 │   └── assets/         # Images, fonts, and other mobile resources
-├── web-app/            # Source code for the web interface
-│   ├── index.html      # Web application entry point
-│   ├── css/            # Web stylesheets
-│   └── js/             # Web JavaScript files
-├── backend/            # Code for the server, APIs, and database models
-│   └── models/         # Database schemas (tasks, users, votes, schedules, etc.)
-├── docs/               # Project documentation and analysis reports
-│   └── analysis/       # Requirement Analysis and Design Documents
-└── README.md           # Project documentation
