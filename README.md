@@ -1,42 +1,62 @@
-# SprintShare: Project Management and Collaboration Application 
+# 🚀 SprintShare: Project Management & Collaboration App
 
-See source code: https://github.com/DG-IT2024/MobileDev_SprintShare
-
----
-
-## Project Objective
-[cite_start]The primary objective of this project is to develop **SprintShare** [cite: 66][cite_start], a collaboration management application designed to **centralize and streamline group collaboration** for students[cite: 66, 67].
-
-The system focuses on eliminating the inefficiencies of using scattered tools by integrating:
-* [cite_start]A **proposal voting system** to simplify decision-making[cite: 59, 70].
-* [cite_start]A **scheduling tool** to suggest the best meeting time based on member availability[cite: 60, 71].
-* [cite_start]A **milestone tracker** with task assignments and progress indicators[cite: 61, 72].
-* [cite_start]A **contribution tracker** that records and displays each member's input to ensure fairness and accountability[cite: 62, 73].
-
-[cite_start]This platform directly addresses delayed group decisions, scheduling conflicts, and lack of accountability to ensure that group work is more **efficient, transparent, and equitable**[cite: 57, 111]. [cite_start]The platform is required to be available on both **web and mobile devices**.
+**Repository:** [MobileDev_SprintShare](https://github.com/DG-IT2024/MobileDev_SprintShare)  
+**Course:** Mobile Development  
+**Institution:** Mapúa Malayan Digital College (MMDC)
 
 ---
 
-## Stakeholders
-**Group Members (Developers/Designers/Testers):**
-- [cite_start]Christian John Batuigas [cite: 14]
-- [cite_start]Kurt Edraira [cite: 14]
-- [cite_start]Danilo Giltendez [cite: 14]
-- [cite_start]Kenneth Ian Lu [cite: 14]
-- [cite_start]**Program and Year Level:** BSIT / 3rd year [cite: 14]
+## 🎯 Project Objective
 
-**End-Users (Beneficiaries):**
-- [cite_start]**Students:** Will benefit from a fairer distribution of work, clearer recognition of contributions, and reduced conflicts[cite: 81].
-- [cite_start]**Teachers:** Will gain better visibility into group processes, making it easier to evaluate both group and individual performance[cite: 82].
+The **SprintShare** project aims to develop a **collaboration management application** that centralizes and streamlines group work for students, addressing the inefficiencies of using multiple disconnected tools.  
+
+This mobile-first platform is designed to make group collaboration **efficient, transparent, and equitable** by integrating key productivity features into one unified system.  
+
+### 🔑 Core Features
+- 🗳️ **Proposal Voting System** — Simplifies group decision-making and consensus building.  
+- 🕒 **Smart Scheduler** — Suggests optimal meeting times based on member availability.  
+- 🎯 **Milestone Tracker** — Tracks progress and manages assigned tasks through visual indicators.  
+- 📊 **Contribution Tracker** — Records and displays each member’s input to promote fairness and accountability.  
+
+The system ensures smooth collaboration by reducing **delayed decisions, scheduling conflicts, and lack of accountability**, while being accessible across both **web and mobile platforms**.
+
+> [cite_start] The primary objective of this project is to develop *SprintShare*, a collaboration management application designed to centralize and streamline group collaboration for students [cite: 66, 67].
 
 ---
 
-## Project Structure
-The repository is structured to facilitate the front-end development for the mobile interfaces.
+## 👥 Stakeholders
+
+### 🧑‍💻 Development Team
+| Name | Role | Program | Year Level |
+|------|-------|----------|-------------|
+| Christian John Batuigas | Developer / Designer | BSIT | 3rd Year |
+| Kurt Edraira | Developer / Tester | BSIT | 3rd Year |
+| Danilo Giltendez | Developer / Designer | BSIT | 3rd Year |
+| Kenneth Ian Lu | Developer / Researcher | BSIT | 3rd Year |
+
+> [cite_start] Group members are responsible for system design, coding, testing, and deployment [cite: 14].
+
+### 🎓 End Users
+- **Students** – Gain a more equitable, transparent, and organized system for managing group work and tracking contributions.  
+- **Teachers** – Gain visibility into group collaboration, enabling more accurate assessment of both group and individual performance.
+
+> [cite_start] Students and teachers benefit from fairer workload distribution, improved accountability, and clearer evaluation metrics [cite: 81, 82].
+
+---
+
+## 🏗️ Project Structure
+
+The repository is organized for efficient front-end development of the mobile application.
 
 ```plaintext
 MobileDev_SprintShare/
 │
-├── mobile-app/         # Source code for the mobile application (e.g., Flutter/React Native)
-│   ├── src/            # Contains app logic, UI, and components
-│   └── assets/         # Images, fonts, and other mobile resources
+├── mobile-app/          # Source code for the mobile application
+│   ├── src/             # App logic, UI components, and navigation
+│   ├── assets/          # Images, icons, fonts, and static resources
+│   └── utils/           # Helper functions and configurations
+│
+├── docs/                # Project documentation (reports, diagrams, design files)
+├── prototypes/          # Figma or wireframe prototypes
+├── tests/               # Test cases and quality assurance scripts
+└── README.md            # Repository overview and guide
