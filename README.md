@@ -1,7 +1,7 @@
 # 🚀 SprintShare: Project Management & Collaboration App
 
 **Repository:** [MobileDev_SprintShare](https://github.com/DG-IT2024/MobileDev_SprintShare)  
-**Course:** Mobile Development  
+**Course:** MO-IT114 - Mobile Development Fundamentals
 **Institution:** Mapúa Malayan Digital College (MMDC)
 
 ---
@@ -18,7 +18,7 @@ This mobile-first platform is designed to make group collaboration **efficient, 
 - 🎯 **Milestone Tracker** — Tracks progress and manages assigned tasks through visual indicators.  
 - 📊 **Contribution Tracker** — Records and displays each member’s input to promote fairness and accountability.  
 
-The system ensures smooth collaboration by reducing **delayed decisions, scheduling conflicts, and lack of accountability**, while being accessible across both **web and mobile platforms**.
+The system ensures smooth collaboration by reducing **delayed decisions, scheduling conflicts, and lack of accountability**, while being accessible in **mobile platforms**.
 
 > [cite_start] The primary objective of this project is to develop *SprintShare*, a collaboration management application designed to centralize and streamline group collaboration for students [cite: 66, 67].
 
@@ -32,7 +32,7 @@ The system ensures smooth collaboration by reducing **delayed decisions, schedul
 | Christian John Batuigas | Developer / Designer | BSIT | 3rd Year |
 | Kurt Edraira | Developer / Tester | BSIT | 3rd Year |
 | Danilo Giltendez | Developer / Designer | BSIT | 3rd Year |
-| Kenneth Ian Lu | Developer / Researcher | BSIT | 3rd Year |
+| Kenneth Ian Lu | Developer / Developer | BSIT | 3rd Year |
 
 > [cite_start] Group members are responsible for system design, coding, testing, and deployment [cite: 14].
 
