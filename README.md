@@ -1,7 +1,7 @@
 # 🚀 SprintShare: Project Management & Collaboration App
 
 **Repository:** [MobileDev_SprintShare](https://github.com/DG-IT2024/MobileDev_SprintShare)  
-**Course:** MO-IT114 - Mobile Development Fundamentals.
+**Course:** MO-IT114 - Mobile Development Fundamentals  
 **Institution:** Mapúa Malayan Digital College (MMDC)
 
 ---
