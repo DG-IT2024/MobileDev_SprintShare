@@ -22,7 +22,8 @@
         app:layout_constraintBottom_toTopOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TextSizeCheck" />
 
     <View
         android:id="@+id/view3"
@@ -52,14 +53,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="45dp"
-        android:ems="10"
+        android:autofillHints=""
         android:background="@drawable/border_box"
+        android:ems="10"
+        android:hint="@string/email_hint_plain"
+        android:inputType="text"
+        android:minHeight="48dp"
         android:paddingStart="24dp"
         android:paddingTop="8dp"
         android:paddingEnd="24dp"
         android:paddingBottom="8dp"
-        android:hint="@string/email_hint_plain"
-        android:inputType="text"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
@@ -69,14 +72,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="12dp"
-        android:ems="10"
+        android:autofillHints=""
         android:background="@drawable/border_box"
+        android:ems="10"
+        android:hint="@string/password_hint_field"
+        android:inputType="textPassword"
+        android:minHeight="48dp"
         android:paddingStart="24dp"
         android:paddingTop="8dp"
         android:paddingEnd="24dp"
         android:paddingBottom="8dp"
-        android:hint="@string/password_hint_field"
-        android:inputType="textPassword"
         app:layout_constraintStart_toStartOf="@+id/editTextText2"
         app:layout_constraintTop_toBottomOf="@+id/editTextText2" />
 
