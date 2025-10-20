@@ -27,7 +27,7 @@ The primary objective of this project is to develop *SprintShare*, a collaborati
 ## 👥 Stakeholders
 
 ### 🧑‍💻 Development Team
-| Name | Role | Program | Year Level |
+| Name | Program | Year Level |
 |------|-------|----------|-------------|
 | Christian John Batuigas | BSIT | 3rd Year |
 | Kurt Edraira | BSIT | 3rd Year |
