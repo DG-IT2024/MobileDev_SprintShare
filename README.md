@@ -29,10 +29,10 @@ The primary objective of this project is to develop *SprintShare*, a collaborati
 ### 🧑‍💻 Development Team
 | Name | Role | Program | Year Level |
 |------|-------|----------|-------------|
-| Christian John Batuigas | Developer / Designer | BSIT | 3rd Year |
-| Kurt Edraira | Developer / Tester | BSIT | 3rd Year |
-| Danilo Giltendez | Developer / Designer | BSIT | 3rd Year |
-| Kenneth Ian Lu | Developer / Researcher | BSIT | 3rd Year |
+| Christian John Batuigas | BSIT | 3rd Year |
+| Kurt Edraira | BSIT | 3rd Year |
+| Danilo Giltendez | BSIT | 3rd Year |
+| Kenneth Ian Lu | BSIT | 3rd Year |
 
 ### 🎓 End Users
 - **Students** – Gain a more equitable, transparent, and organized system for managing group work and tracking contributions.  
