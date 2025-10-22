@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Popup widths -->
+    <dimen name="dropdown_popup_width">220dp</dimen>
+    <dimen name="filter_popup_width">160dp</dimen>
+    <dimen name="add_popup_width">260dp</dimen>
+
+    <!-- General spacing -->
+    <dimen name="popup_padding">16dp</dimen>
+</resources>

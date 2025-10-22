@@ -2,6 +2,7 @@ package com.example.sprintshare;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -10,10 +11,14 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.activity.EdgeToEdge;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import org.w3c.dom.Text;
 
@@ -26,6 +31,7 @@ public class AccountActivity extends AppCompatActivity {
     AutoCompleteTextView autoCompleteTextView;
 
     ArrayAdapter<String> adapterStatus;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,7 +49,7 @@ public class AccountActivity extends AppCompatActivity {
 
         autoCompleteTextView.setAdapter(adapterStatus);
 
-        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener(){
+        autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
@@ -63,5 +69,23 @@ public class AccountActivity extends AppCompatActivity {
             Intent intent = new Intent(AccountActivity.this, LoginActivity.class);
             startActivity(intent);
         });
+
+        // navigation menu
+        BottomNavigationView bottom_navigation = findViewById(R.id.bottomNavigation);
+        bottom_navigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.nav_projects) {
+                    Intent intent1 = new Intent(AccountActivity.this, ProjectHomeActivity.class);
+                    startActivity(intent1);
+                }else if (item.getItemId()  == R.id.nav_tasks) {
+                    Intent intent2 = new Intent(AccountActivity.this, TasksActivity.class);
+                    startActivity(intent2);
+                }
+                return true;
+            }
+        });
+
     }
+
 }

@@ -14,6 +14,7 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class LoginActivity extends AppCompatActivity {
     Button gotoSignUpBtn;
+    Button gotoLoginBtn;
     TextView gotoForgotPasswordBtn;
     @SuppressLint("MissingInflatedId")
     @Override
@@ -34,6 +35,12 @@ public class LoginActivity extends AppCompatActivity {
         gotoForgotPasswordBtn = findViewById(R.id.gotoForgotPasswordBtn);
         gotoForgotPasswordBtn.setOnClickListener(v -> {
             Intent intent = new Intent(LoginActivity.this, ForgotPasswordActivity.class);
+            startActivity(intent);
+        });
+
+        gotoLoginBtn = findViewById(R.id.gotoLoginBtn);
+        gotoLoginBtn.setOnClickListener(v -> {
+            Intent intent = new Intent(LoginActivity.this, AccountActivity.class);
             startActivity(intent);
         });
     }
