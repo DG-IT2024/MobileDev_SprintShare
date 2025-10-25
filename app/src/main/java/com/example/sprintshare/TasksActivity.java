@@ -53,7 +53,7 @@ public class TasksActivity extends AppCompatActivity implements TaskAdapter.OnTa
         // init data
         tabTasks = new HashMap<>();
         tabNames = new ArrayList<>();
-        currentTab = "Milestone";
+//        currentTab = "Milestone";
         tabNames.add(currentTab);
         tabTasks.put(currentTab, new ArrayList<>());
 
@@ -83,9 +83,11 @@ public class TasksActivity extends AppCompatActivity implements TaskAdapter.OnTa
                 if (item.getItemId() == R.id.nav_account) {
                     Intent intent1 = new Intent(TasksActivity.this, AccountActivity.class);
                     startActivity(intent1);
+                    overridePendingTransition(0, 0);
                 }else if (item.getItemId()  == R.id.nav_projects) {
                     Intent intent2 = new Intent(TasksActivity.this, ProjectHomeActivity.class);
                     startActivity(intent2);
+                    overridePendingTransition(0, 0);
                 }
                 return true;
             }
@@ -96,8 +98,8 @@ public class TasksActivity extends AppCompatActivity implements TaskAdapter.OnTa
     // show first dialog: choose add task OR create tab
     private void showAddChoiceDialog() {
         AlertDialog.Builder b = new AlertDialog.Builder(this);
-        b.setTitle("Add");
-        b.setItems(new CharSequence[]{"Add Task to Current Milestone", "Create New Milestone"}, (dialog, which) -> {
+        b.setTitle("Action");
+        b.setItems(new CharSequence[]{"Add Task to Current Milestone", "Add New Milestone"}, (dialog, which) -> {
             if (which == 0) showAddTaskDialog();
             else showCreateTabDialog();
         });

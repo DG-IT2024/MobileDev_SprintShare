@@ -78,9 +78,11 @@ public class AccountActivity extends AppCompatActivity {
                 if (item.getItemId() == R.id.nav_projects) {
                     Intent intent1 = new Intent(AccountActivity.this, ProjectHomeActivity.class);
                     startActivity(intent1);
+                    overridePendingTransition(0, 0);
                 }else if (item.getItemId()  == R.id.nav_tasks) {
                     Intent intent2 = new Intent(AccountActivity.this, TasksActivity.class);
                     startActivity(intent2);
+                    overridePendingTransition(0, 0);
                 }
                 return true;
             }
