@@ -83,7 +83,16 @@ public class AccountActivity extends AppCompatActivity {
                     Intent intent2 = new Intent(AccountActivity.this, TasksActivity.class);
                     startActivity(intent2);
                     overridePendingTransition(0, 0);
+                }else if (item.getItemId()  == R.id.nav_polls) {
+                    Intent intent3 = new Intent(AccountActivity.this, VotingActivity.class);
+                    startActivity(intent3);
+                    overridePendingTransition(0, 0);
+                }else if (item.getItemId()  == R.id.nav_calendar) {
+                    Intent intent4 = new Intent(AccountActivity.this, AgendaActivity.class);
+                    startActivity(intent4);
+                    overridePendingTransition(0, 0);
                 }
+
                 return true;
             }
         });

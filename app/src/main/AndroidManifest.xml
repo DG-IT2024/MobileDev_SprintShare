@@ -30,6 +30,12 @@
             android:name=".TasksActivity"
             android:exported="false" />
         <activity
+            android:name=".VotingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".AgendaActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="false" />
         <activity android:name=".LoginActivity"
