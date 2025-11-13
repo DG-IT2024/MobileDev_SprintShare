@@ -11,6 +11,7 @@
         android:text="Create New Milestone"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="@color/black"
         android:layout_marginBottom="12dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -23,7 +24,10 @@
         android:layout_height="wrap_content"
         android:backgroundTint="@color/black"
         android:inputType="textPersonName"
+        android:textColor="@color/black"
+        android:textColorHint="@color/gray"
         android:padding="10dp" />
+
 
     <LinearLayout
         android:orientation="horizontal"

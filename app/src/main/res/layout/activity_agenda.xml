@@ -6,14 +6,16 @@
     android:background="@color/bg">
 
     <View
-        android:id="@+id/statusBarCover"
+        android:id="@+id/topBar"
         android:layout_width="match_parent"
         android:layout_height="35dp"
-        android:background="@color/black_bg" />
+        android:background="@color/black_bg"
+        android:layout_alignParentTop="true" />
 
     <!-- Top App Bar (same visual style as Voting) -->
     <LinearLayout
         android:id="@+id/topAppBarAgenda"
+        android:layout_below="@id/topBar"
         android:layout_width="match_parent"
         android:layout_height="56dp"
         android:background="@color/dark_gray"
@@ -28,7 +30,7 @@
             android:layout_height="36dp"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_chevron_down_24"
-            android:tint="@color/white"
+            app:tint="@color/white"
             android:contentDescription="@string/cd_back" />
 
         <TextView
@@ -47,7 +49,7 @@
             android:layout_height="36dp"
             android:background="@android:color/transparent"
             android:src="@drawable/ic_calendar_24"
-            android:tint="@color/white"
+            app:tint="@color/white"
             android:contentDescription="@string/cd_calendar" />
     </LinearLayout>
 
@@ -65,45 +67,60 @@
             android:layout_width="match_parent"
             android:layout_height="44dp"
             android:orientation="horizontal"
-            android:gravity="center_vertical"
+            android:gravity="center"
             android:paddingLeft="12dp"
             android:paddingRight="12dp"
-            android:background="@color/surface">
+            android:background="@color/surface"
+
+            >
 
             <TextView
                 android:id="@+id/btnPrevWeek"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:text="≪"
                 android:textSize="18sp"
-                android:padding="8dp" />
+                android:padding="8dp"
+                android:textColor="@color/black"
+                />
 
             <TextView
                 android:id="@+id/btnPrevDay"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:text="‹"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:padding="8dp" />
 
             <TextView
                 android:id="@+id/btnNextDay"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
                 android:text="›"
-                android:textSize="18sp"
-                android:padding="8dp"
-                android:layout_marginLeft="12dp" />
-
-            <TextView
-                android:id="@+id/btnNextWeek"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="≫"
+                android:textColor="@color/black"
                 android:textSize="18sp"
                 android:padding="8dp" />
 
+            <TextView
+                android:id="@+id/btnNextWeek"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="8dp"
+                android:text="≫"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
         </LinearLayout>
+
 
         <!-- Month | Year & small calendar button inline -->
         <LinearLayout
@@ -120,6 +137,7 @@
                 android:text="September | 2025"
                 android:textStyle="bold"
                 android:textSize="16sp"
+                android:textColor="@color/black"
                 android:padding="6dp"/>
         </LinearLayout>
 
@@ -139,17 +157,6 @@
                 android:padding="6dp" />
         </ScrollView>
     </LinearLayout>
-
-<!--    &lt;!&ndash; Bottom Navigation (reuse same menu) &ndash;&gt;-->
-<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-<!--        android:id="@+id/bottomNavigation"-->
-<!--        android:layout_alignParentBottom="true"-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:background="@color/dark_gray"-->
-<!--        app:itemIconTint="@color/white"-->
-<!--        app:itemTextColor="@color/white"-->
-<!--        app:menu="@menu/bottom_nav_menu" />-->
 
     <!-- Bottom navigation fixed to bottom -->
     <com.google.android.material.bottomnavigation.BottomNavigationView

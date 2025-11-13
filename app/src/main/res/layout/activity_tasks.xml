@@ -10,7 +10,7 @@
     <View
         android:id="@+id/statusBarCover"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="35dp"
         android:background="@color/black_bg" />
 
     <!-- === TASKS DROPDOWN HEADER === -->
@@ -91,7 +91,7 @@
                 android:layout_marginEnd="6dp"
                 android:background="@drawable/rounded_black_button"
                 android:src="@drawable/ic_add"
-                android:tint="#FFFFFF"/>
+                app:tint="#FFFFFF"/>
 
             <ImageButton
                 android:id="@+id/btnFilter"
@@ -101,7 +101,7 @@
                 android:layout_marginStart="6dp"
                 android:background="@drawable/rounded_black_button"
                 android:src="@drawable/ic_filter_list"
-                android:tint="#FFFFFF"/>
+                app:tint="#FFFFFF"/>
         </LinearLayout>
     </LinearLayout>
 

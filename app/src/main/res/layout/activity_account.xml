@@ -5,38 +5,21 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:fitsSystemWindows="true"
     tools:context=".AccountActivity">
 
     <View
         android:id="@+id/topBar"
         android:layout_width="match_parent"
-        android:layout_height="35dp"
-        android:background="@color/white"
+        android:layout_height="5dp"
+        android:background="@color/black_bg"
         android:layout_alignParentTop="true" />
-
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigation"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@color/dark_gray"
-        app:itemActiveIndicatorStyle="@null"
-        app:itemBackground="@drawable/nav_item_background"
-        app:itemIconTint="@color/white"
-        app:itemTextColor="@color/white"
-        app:labelVisibilityMode="labeled"
-        android:layout_gravity="bottom"
-        app:menu="@menu/bottom_nav_menu" />
-
 
     <LinearLayout
         android:id="@+id/contentContainer_Fixed"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/topBar"
         android:layout_above="@id/bottomNavigation"
+        android:layout_below="@id/topBar"
         android:orientation="vertical"
         android:paddingStart="16dp"
         android:paddingEnd="16dp"
@@ -125,5 +108,20 @@
             android:textSize="16sp" />
 
     </LinearLayout>
+
+    <!-- Bottom navigation fixed to bottom -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_gray"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemBackground="@drawable/nav_item_background"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+        android:layout_gravity="bottom"
+        app:menu="@menu/bottom_nav_menu" />
 
 </RelativeLayout>
