@@ -8,10 +8,18 @@
     android:background="@color/bg"
     tools:context=".VotingActivity">
 
+    <View
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/black_bg"
+        android:layout_alignParentTop="true" />
+
     <!-- Top App Bar (LinearLayout) -->
     <LinearLayout
         android:id="@+id/topAppBarContainer"
         android:layout_width="match_parent"
+        android:layout_below="@id/topBar"
         android:layout_height="56dp"
         android:orientation="horizontal"
         android:background="@color/dark_gray"
@@ -26,7 +34,7 @@
             android:background="@android:color/transparent"
             android:contentDescription="@string/cd_back"
             android:src="@drawable/ic_chevron_down_24"
-            android:tint="@color/white" />
+            app:tint="@color/white" />
 
         <TextView
             android:id="@+id/tvTitle"
@@ -46,7 +54,7 @@
             android:background="@android:color/transparent"
             android:contentDescription="@string/cd_add_poll"
             android:src="@drawable/ic_add_24"
-            android:tint="@color/white" />
+            app:tint="@color/white" />
     </LinearLayout>
 
     <!-- Main content below app bar and above bottom nav -->
@@ -73,6 +81,7 @@
                 android:layout_weight="1"
                 android:text="@string/label_polls"
                 android:textSize="16sp"
+                android:textAlignment="center"
                 android:textStyle="bold" />
 
             <ImageButton
@@ -94,15 +103,34 @@
             tools:listitem="@layout/item_poll" />
     </LinearLayout>
 
-    <!-- Bottom Navigation (Material) -->
+<!--    &lt;!&ndash; Bottom Navigation (Material) &ndash;&gt;-->
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottomNavigation"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/dark_gray"-->
+<!--        app:itemIconTint="@color/white"-->
+<!--        app:itemTextColor="@color/white"-->
+<!--        app:menu="@menu/bottom_nav_menu" />-->
+
+    <!-- Bottom navigation fixed to bottom -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:background="@color/dark_gray"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemBackground="@drawable/nav_item_background"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+        android:layout_gravity="bottom"
         app:menu="@menu/bottom_nav_menu" />
+
+
+
+
 
 </RelativeLayout>

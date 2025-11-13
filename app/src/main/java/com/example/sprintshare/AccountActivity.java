@@ -47,7 +47,11 @@ public class AccountActivity extends AppCompatActivity {
         autoCompleteTextView = findViewById(R.id.auto_complete_text);
         adapterStatus = new ArrayAdapter<String>(this, R.layout.list_status, status);
 
+        // Attach adapter
         autoCompleteTextView.setAdapter(adapterStatus);
+
+        // Set default status (first item in the array)
+        autoCompleteTextView.setText(status[0], false);  // Default = "Online"
 
         autoCompleteTextView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
 
@@ -75,20 +79,20 @@ public class AccountActivity extends AppCompatActivity {
         bottom_navigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                if (item.getItemId() == R.id.nav_projects) {
-                    Intent intent1 = new Intent(AccountActivity.this, ProjectHomeActivity.class);
+                if (item.getItemId() == R.id.nav_polls) {
+                    Intent intent1 = new Intent(AccountActivity.this, VotingActivity.class);
                     startActivity(intent1);
                     overridePendingTransition(0, 0);
-                }else if (item.getItemId()  == R.id.nav_tasks) {
-                    Intent intent2 = new Intent(AccountActivity.this, TasksActivity.class);
+                }else if (item.getItemId()  == R.id.nav_projects) {
+                    Intent intent2 = new Intent(AccountActivity.this, ProjectHomeActivity.class);
                     startActivity(intent2);
                     overridePendingTransition(0, 0);
-                }else if (item.getItemId()  == R.id.nav_polls) {
-                    Intent intent3 = new Intent(AccountActivity.this, VotingActivity.class);
+                }else if (item.getItemId()  == R.id.nav_calendar) {
+                    Intent intent3 = new Intent(AccountActivity.this, AgendaActivity.class);
                     startActivity(intent3);
                     overridePendingTransition(0, 0);
-                }else if (item.getItemId()  == R.id.nav_calendar) {
-                    Intent intent4 = new Intent(AccountActivity.this, AgendaActivity.class);
+                }else if (item.getItemId()  == R.id.nav_tasks) {
+                    Intent intent4 = new Intent(AccountActivity.this, TasksActivity.class);
                     startActivity(intent4);
                     overridePendingTransition(0, 0);
                 }

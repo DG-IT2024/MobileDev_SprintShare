@@ -1,17 +1,21 @@
 package com.example.sprintshare;
 
 import android.app.DatePickerDialog;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
+import android.view.MenuItem;
 import android.widget.ImageButton;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -57,10 +61,33 @@ public class AgendaActivity extends AppCompatActivity {
         tvMonthYear = findViewById(R.id.tvMonthYear);
         tableGrid   = findViewById(R.id.tableGrid);
 
-        // Bottom nav
-        BottomNavigationView bottom = findViewById(R.id.bottomNavigation);
-        bottom.setSelectedItemId(R.id.nav_calendar);
-        bottom.setOnItemSelectedListener(item -> true);
+        // navigation menu
+        BottomNavigationView bottom_navigation = findViewById(R.id.bottomNavigation);
+        bottom_navigation.setSelectedItemId(R.id.nav_calendar);
+        bottom_navigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.nav_account) {
+                    Intent intent1 = new Intent(AgendaActivity.this, AccountActivity.class);
+                    startActivity(intent1);
+                    overridePendingTransition(0, 0);
+                }else if (item.getItemId()  == R.id.nav_polls) {
+                    Intent intent2 = new Intent(AgendaActivity.this, VotingActivity.class);
+                    startActivity(intent2);
+                    overridePendingTransition(0, 0);
+                }else if (item.getItemId()  == R.id.nav_projects) {
+                    Intent intent3 = new Intent(AgendaActivity.this, ProjectHomeActivity.class);
+                    startActivity(intent3);
+                    overridePendingTransition(0, 0);
+                }else if (item.getItemId()  == R.id.nav_tasks) {
+                    Intent intent4 = new Intent(AgendaActivity.this, TasksActivity.class);
+                    startActivity(intent4);
+                    overridePendingTransition(0, 0);
+                }
+
+                return true;
+            }
+        });
 
         btnBack.setOnClickListener(v -> finish());
 

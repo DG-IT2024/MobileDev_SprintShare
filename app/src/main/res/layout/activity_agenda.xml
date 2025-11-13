@@ -5,6 +5,12 @@
     android:layout_height="match_parent"
     android:background="@color/bg">
 
+    <View
+        android:id="@+id/statusBarCover"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/black_bg" />
+
     <!-- Top App Bar (same visual style as Voting) -->
     <LinearLayout
         android:id="@+id/topAppBarAgenda"
@@ -134,15 +140,30 @@
         </ScrollView>
     </LinearLayout>
 
-    <!-- Bottom Navigation (reuse same menu) -->
+<!--    &lt;!&ndash; Bottom Navigation (reuse same menu) &ndash;&gt;-->
+<!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
+<!--        android:id="@+id/bottomNavigation"-->
+<!--        android:layout_alignParentBottom="true"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:background="@color/dark_gray"-->
+<!--        app:itemIconTint="@color/white"-->
+<!--        app:itemTextColor="@color/white"-->
+<!--        app:menu="@menu/bottom_nav_menu" />-->
+
+    <!-- Bottom navigation fixed to bottom -->
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
-        android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:background="@color/dark_gray"
+        app:itemActiveIndicatorStyle="@null"
+        app:itemBackground="@drawable/nav_item_background"
         app:itemIconTint="@color/white"
         app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+        android:layout_gravity="bottom"
         app:menu="@menu/bottom_nav_menu" />
 
 </RelativeLayout>

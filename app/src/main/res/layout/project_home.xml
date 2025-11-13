@@ -10,7 +10,7 @@
     <View
         android:id="@+id/statusBarCover"
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="35dp"
         android:background="@color/black_bg" />
 
     <!-- Choose Project Dropdown Section -->
@@ -26,6 +26,13 @@
         android:elevation="2dp">
 
         <!-- FrameLayout lets us stack the white box and the orange circle -->
+<!--        <TextView-->
+<!--            android:id="@+id/textView3"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="nav_account" />-->
+
         <FrameLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"

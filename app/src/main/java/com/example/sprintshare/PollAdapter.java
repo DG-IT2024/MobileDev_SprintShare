@@ -12,6 +12,9 @@ import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.content.res.ColorStateList;
+import android.os.Build;
+
 
 import androidx.annotation.NonNull;
 import androidx.core.content.ContextCompat;
@@ -163,7 +166,6 @@ public class PollAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
         }
     }
 
-    // ---------------- CLOSED POLL ----------------
     class ClosedVH extends RecyclerView.ViewHolder {
         TextView tvTitle, tvFinal, tvTotal;
         LinearLayout resultsContainer;
@@ -189,27 +191,61 @@ public class PollAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
                 PollOption opt = poll.options.get(i);
 
                 // Row container
-                LinearLayout wrap = new LinearLayout(ctx);
-                wrap.setOrientation(LinearLayout.VERTICAL);
-                wrap.setPadding(0, dp(6), 0, dp(6));
+                LinearLayout row = new LinearLayout(ctx);
+                row.setOrientation(LinearLayout.VERTICAL);
+                row.setPadding(dp(8), dp(6), dp(8), dp(6));
+                row.setLayoutParams(new LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        ViewGroup.LayoutParams.WRAP_CONTENT
+                ));
 
-                // Label
+                boolean isWinner = (i == win);
+
+                // ---- LABEL ----
                 TextView label = new TextView(ctx);
                 int pct = (int) Math.round(100.0 * opt.votes / total);
                 label.setText("Option #" + (i + 1) + ": " + opt.label + "  (" + pct + "%)");
-                label.setTextColor(i == win
-                        ? Color.parseColor("#FF7A1A")
-                        : Color.parseColor("#6B7280"));
+                label.setTextColor(isWinner
+                        ? Color.parseColor("#FF7A1A")   // orange
+                        : Color.parseColor("#6B7280")); // gray
 
-                // Progress bar
+                // Soft background for row (optional)
+                row.setBackgroundResource(isWinner
+                        ? R.drawable.bg_winner_row
+                        : R.drawable.bg_loser_row);
+
+                // ---- PROGRESS BAR ----
                 ProgressBar bar = new ProgressBar(ctx, null, android.R.attr.progressBarStyleHorizontal);
+                bar.setIndeterminate(false);
                 bar.setMax(100);
-                bar.setProgress(pct);
-                bar.setProgressDrawable(ContextCompat.getDrawable(ctx, R.drawable.progress_orange));
+                bar.setProgress(pct);   // 50 / 33 / 17 → fraction of bar
 
-                wrap.addView(label);
-                wrap.addView(bar);
-                resultsContainer.addView(wrap);
+                LinearLayout.LayoutParams barLp = new LinearLayout.LayoutParams(
+                        ViewGroup.LayoutParams.MATCH_PARENT,
+                        dp(14)
+                );
+                barLp.topMargin = dp(4);
+                bar.setLayoutParams(barLp);
+
+                // 1) Same drawable for everyone
+                bar.setProgressDrawable(ContextCompat.getDrawable(ctx, R.drawable.progress_base));
+
+                // 2) ONLY tint the FILLED part (no background tint)
+                if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
+                    int winnerColor = Color.parseColor("#FF7A1A");  // orange
+                    int loserColor  = Color.parseColor("#9CA3AF");  // gray
+
+                    bar.setProgressTintList(
+                            android.content.res.ColorStateList.valueOf(
+                                    isWinner ? winnerColor : loserColor
+                            )
+                    );
+                    // IMPORTANT: do NOT call setProgressBackgroundTintList here
+                }
+
+                row.addView(label);
+                row.addView(bar);
+                resultsContainer.addView(row);
             }
 
             tvFinal.setText("Final Vote: " + poll.options.get(win).label);
@@ -230,4 +266,7 @@ public class PollAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
             return Math.round(px * d);
         }
     }
+
+
+
 }

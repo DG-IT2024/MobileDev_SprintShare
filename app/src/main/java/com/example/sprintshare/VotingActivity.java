@@ -1,14 +1,18 @@
 package com.example.sprintshare;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.widget.ImageButton;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.navigation.NavigationBarView;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -28,7 +32,7 @@ public class VotingActivity extends AppCompatActivity {
         rvPolls = findViewById(R.id.rvPolls);
         ImageButton btnAddPoll = findViewById(R.id.btnAddPoll);
         ImageButton btnBack = findViewById(R.id.btnBack);
-        BottomNavigationView bottomNav = findViewById(R.id.bottomNavigation);
+//        BottomNavigationView bottomNav = findViewById(R.id.bottomNavigation);
 
         // --- RecyclerView setup ---
         rvPolls.setLayoutManager(new LinearLayoutManager(this));
@@ -49,13 +53,35 @@ public class VotingActivity extends AppCompatActivity {
         // --- Back ---
         btnBack.setOnClickListener(v -> finish());
 
-        // --- Bottom Navigation (placeholder handlers) ---
-        bottomNav.setSelectedItemId(R.id.nav_polls);
-        bottomNav.setOnItemSelectedListener(item -> {
-            // TODO: navigate to other sections if you have those activities
-            // For now, keep Polls selected.
-            return true;
+        // navigation menu
+        BottomNavigationView bottom_navigation = findViewById(R.id.bottomNavigation);
+        bottom_navigation.setSelectedItemId(R.id.nav_polls);
+        bottom_navigation.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                if (item.getItemId() == R.id.nav_account) {
+                    Intent intent1 = new Intent(VotingActivity.this, AccountActivity.class);
+                    startActivity(intent1);
+                    overridePendingTransition(0, 0);
+                }else if (item.getItemId()  == R.id.nav_projects) {
+                    Intent intent2 = new Intent(VotingActivity.this, ProjectHomeActivity.class);
+                    startActivity(intent2);
+                    overridePendingTransition(0, 0);
+                }else if (item.getItemId()  == R.id.nav_calendar) {
+                    Intent intent3 = new Intent(VotingActivity.this, AgendaActivity.class);
+                    startActivity(intent3);
+                    overridePendingTransition(0, 0);
+                }else if (item.getItemId()  == R.id.nav_tasks) {
+                    Intent intent4 = new Intent(VotingActivity.this, TasksActivity.class);
+                    startActivity(intent4);
+                    overridePendingTransition(0, 0);
+                }
+
+                return true;
+            }
         });
+
+
     }
 
     private void seedData() {
@@ -76,9 +102,9 @@ public class VotingActivity extends AppCompatActivity {
         p2.options.add(new PollOption("Burger"));
         p2.options.add(new PollOption("Hotdog"));
         p2.options.add(new PollOption("Sandwich"));
-        p2.options.get(0).votes = 30;
-        p2.options.get(1).votes = 15;
-        p2.options.get(2).votes = 5;
+        p2.options.get(0).votes = 3;
+        p2.options.get(1).votes = 2;
+        p2.options.get(2).votes = 1;
         p2.closed = true;
         polls.add(p2);
     }
