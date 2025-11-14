@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#F7F7F7">
+
+    <!-- Status bar cover -->
+    <View
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_alignParentTop="true"
+        android:background="@color/black_bg" />
+
+    <!-- Main vertical content (everything above bottom nav) -->
+    <LinearLayout
+        android:id="@+id/contentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/topBar"
+        android:layout_above="@+id/bottomNavigation"
+        android:orientation="vertical">
+
+        <!-- Choose Project Dropdown Section -->
+        <LinearLayout
+            android:id="@+id/layoutChooseProject"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@color/dark_gray"
+            android:paddingHorizontal="16dp"
+            android:paddingVertical="12dp"
+            android:elevation="2dp">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <!-- White rounded background for text -->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="vertical"
+                    android:gravity="center"
+                    android:background="@drawable/rounded_white_box"
+                    android:paddingHorizontal="12dp">
+
+                    <TextView
+                        android:id="@+id/textChooseProject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Choose Project"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        android:textColor="@android:color/black" />
+
+                    <TextView
+                        android:id="@+id/tvSelectedProject"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No Project Selected"
+                        android:textSize="12sp"
+                        android:textColor="@android:color/black" />
+                </LinearLayout>
+
+                <!-- Orange dropdown circle OVERLAYED on top-right -->
+                <ImageView
+                    android:id="@+id/iconDropdown"
+                    android:layout_width="52dp"
+                    android:layout_height="52dp"
+                    android:layout_gravity="end|top"
+                    android:layout_marginEnd="0.5dp"
+                    android:layout_marginTop="-1dp"
+                    android:background="@drawable/orange_circle_bg"
+                    android:padding="8dp"
+                    android:src="@drawable/ic_arrow_drop_down"
+                    android:contentDescription="Open Project Dropdown"
+                    app:tint="@android:color/white" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Filter Row -->
+        <LinearLayout
+            android:id="@+id/filterRow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="16dp"
+            android:paddingTop="12dp"
+            android:paddingBottom="4dp"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:id="@+id/tvProjectsLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Projects"
+                android:textStyle="bold"
+                android:textSize="16sp"
+                android:textColor="@android:color/black" />
+
+            <ImageButton
+                android:id="@+id/btnFilter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:padding="8dp"
+                android:contentDescription="Filter"
+                android:src="@drawable/ic_filter_list"
+                app:tint="@color/gray" />
+        </LinearLayout>
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewProjects"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingHorizontal="12dp"
+            android:paddingTop="4dp"
+            android:paddingBottom="12dp" />
+
+    </LinearLayout>
+
+    <!-- Floating Action Button (floats above list & above bottom nav) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAddProject"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_above="@id/bottomNavigation"
+        android:layout_margin="16dp"
+        app:backgroundTint="@color/orange"
+        app:srcCompat="@drawable/ic_add"
+        android:contentDescription="Add Project" />
+
+    <!-- Bottom Navigation -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/dark_gray"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+        app:itemBackground="@drawable/nav_item_background"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemActiveIndicatorStyle="@null" />
+
+</RelativeLayout>

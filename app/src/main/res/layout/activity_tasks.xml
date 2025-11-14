@@ -1,0 +1,177 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- === STATUS BAR COVER === -->
+    <View
+        android:id="@+id/statusBarCover"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:background="@color/black_bg" />
+
+    <!-- === TASKS DROPDOWN HEADER === -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark_gray"
+        android:paddingHorizontal="20dp"
+        android:paddingBottom="8dp"
+        android:paddingTop="8dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/dropdownHeader"
+                android:orientation="horizontal"
+                android:background="@drawable/rounded_white_bg"
+                android:gravity="center_vertical"
+                android:padding="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:src="@drawable/ic_tasks"
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:tint="#000"
+                    android:layout_marginEnd="8dp"/>
+
+                <TextView
+                    android:id="@+id/tvCurrentTab"
+                    android:text="Milestone"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btnDropdown"
+                android:src="@drawable/ic_arrow_drop_down"
+                android:layout_width="62dp"
+                android:layout_height="62dp"
+                android:tint="@color/white"
+                android:background="@drawable/orange_circle_bg"
+                android:padding="4dp"
+                android:layout_gravity="end|center_vertical"
+                android:translationX="0dp"/>
+        </FrameLayout>
+    </LinearLayout>
+
+
+    <!-- === ADD AND FILTER BUTTONS === -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/black_outline"
+        android:paddingHorizontal="20dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnAddTask"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/rounded_black_button"
+                android:src="@drawable/ic_add"
+                app:tint="#FFFFFF"/>
+
+            <ImageButton
+                android:id="@+id/btnFilter"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:background="@drawable/rounded_black_button"
+                android:src="@drawable/ic_filter_list"
+                app:tint="#FFFFFF"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <!-- === MAIN CONTENT === -->
+    <LinearLayout
+        android:id="@+id/mainContent"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Progress Bar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <TextView
+                android:id="@+id/tvMilestoneLabel"
+                android:text="Task Progress"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_alignParentStart="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/tvProgressPercent"
+                android:text="0%"
+                android:textColor="@color/black"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:layout_below="@id/tvMilestoneLabel"
+                android:layout_marginTop="6dp"
+                android:progressDrawable="@drawable/custom_progress_bar"
+                android:max="100"
+                android:progress="0"/>
+        </RelativeLayout>
+
+        <!-- RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerTasks"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp"/>
+    </LinearLayout>
+
+    <!-- === BOTTOM NAVIGATION (outside padding) === -->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:background="@color/dark_gray"
+        app:itemIconTint="@color/white"
+        app:itemTextColor="@color/white"
+        app:labelVisibilityMode="labeled"
+        app:itemBackground="@drawable/nav_item_background"
+        app:menu="@menu/bottom_nav_menu"
+        app:itemActiveIndicatorStyle="@null" />
+
+</LinearLayout>

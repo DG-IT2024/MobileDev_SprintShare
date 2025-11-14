@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Track / background (stays the same for winner & losers) -->
+    <item android:id="@android:id/background">
+        <shape>
+            <corners android:radius="12dp" />
+            <solid android:color="#E5E7EB" /> <!-- light gray track -->
+        </shape>
+    </item>
+
+    <!-- Filled part (color will be tinted in Java) -->
+    <item android:id="@android:id/progress">
+        <shape>
+            <corners android:radius="12dp" />
+            <solid android:color="#000000" /> <!-- base, will be overridden by tint -->
+        </shape>
+    </item>
+
+</layer-list>
