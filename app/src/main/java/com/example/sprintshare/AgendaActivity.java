@@ -150,7 +150,7 @@ public class AgendaActivity extends AppCompatActivity {
         TextView timeHdr = makeHeaderCell("TIME", true);
         header.addView(timeHdr);
 
-        SimpleDateFormat dayName = new SimpleDateFormat("EEE", Locale.getDefault()); // SUN, MON
+        SimpleDateFormat dayName = new SimpleDateFormat("E", Locale.getDefault()); // SUN, MON
         SimpleDateFormat dayNum  = new SimpleDateFormat("dd", Locale.getDefault());  // 01, 02, ...
 
         Calendar colCal = (Calendar) weekStart.clone();
