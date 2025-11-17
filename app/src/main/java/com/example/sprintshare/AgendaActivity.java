@@ -100,7 +100,7 @@ public class AgendaActivity extends AppCompatActivity {
         btnNextDay.setOnClickListener(v  -> { shiftDays(1); });
         btnNextWeek.setOnClickListener(v -> { shiftDays(7); });
 
-        seedDemoEvents();
+//        seedDemoEvents();
         buildScreen();
     }
 
@@ -263,18 +263,18 @@ public class AgendaActivity extends AppCompatActivity {
     }
 
     // ---------- Demo data ----------
-    private void seedDemoEvents() {
-        events.clear();
-        // Example events near 'anchor' day
-        Calendar d1 = (Calendar) anchor.clone();
-        d1.set(Calendar.HOUR_OF_DAY, 9);
-        events.add(new EventItem("Stand-up", d1, 9));
-
-        Calendar d2 = (Calendar) anchor.clone();
-        d2.add(Calendar.DAY_OF_MONTH, 2);
-        d2.set(Calendar.HOUR_OF_DAY, 14);
-        events.add(new EventItem("Client Call", d2, 14));
-    }
+//    private void seedDemoEvents() {
+//        events.clear();
+//        // Example events near 'anchor' day
+//        Calendar d1 = (Calendar) anchor.clone();
+//        d1.set(Calendar.HOUR_OF_DAY, 9);
+//        events.add(new EventItem("Stand-up", d1, 9));
+//
+//        Calendar d2 = (Calendar) anchor.clone();
+//        d2.add(Calendar.DAY_OF_MONTH, 2);
+//        d2.set(Calendar.HOUR_OF_DAY, 14);
+//        events.add(new EventItem("Client Call", d2, 14));
+//    }
 
     // Simple event record
     static class EventItem {
